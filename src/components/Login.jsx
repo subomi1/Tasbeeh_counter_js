@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Login() {
   function handleSubmit(event) {
     event.preventDefault();
@@ -34,9 +36,9 @@ export default function Login() {
           <button className="bg-[#4CAF50] text-white rounded-md mt-10 px-10 py-2 cursor-pointer">
             Log in
           </button>
-          <a to="/register" className="mt-5 underline text-[#4CAF50]">
+          <Link to="/register" className="mt-5 underline text-[#4CAF50]">
             Don't have an account? Sign up
-          </a>
+          </Link>
         </form>
       </div>
     </section>
