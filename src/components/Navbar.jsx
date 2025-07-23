@@ -1,0 +1,37 @@
+import logo from '../assets/OIP__1_-removebg-preview.png'
+import { NavLink } from 'react-router-dom';
+import hamIcon from '../assets/ham.svg';
+import exitIcon from '../assets/x.svg';
+import { useState } from 'react';
+
+export default function Navbar() {
+    const [click, setClick] = useState(false)
+
+    function handleClick() {
+        setClick(!click)
+    }
+    let cssClass = '';
+    if (click) {
+        cssClass = 'absolute flex flex-col gap-3 items-center w-full top-[60px] p-5 bg-white right-0 glass'
+    }else {
+        cssClass = 'nav-links sm:flex gap-5 items-center hidden'
+    }
+    return(
+        <nav className='flex justify-between p-5'>
+            <div className="logo flex items-center gap-1">
+                <img src={logo} alt="Logo" className='w-8'/>
+                <h1 className='lato font-bold'>
+                    Tasbeeh Counter
+                </h1>
+            </div>
+            {click ? <img src={exitIcon} alt="" onClick={handleClick} className='w-7 sm:hidden'/> : <img src={hamIcon} alt="" onClick={handleClick} className='w-7 sm:hidden'/>}
+            <div className={cssClass}>
+                <NavLink className='font-semibold'>Home</NavLink>
+                <NavLink className='font-semibold'>Counter</NavLink>
+                <NavLink className='font-semibold'>Favourites</NavLink>
+                <NavLink className='font-semibold'>History</NavLink>
+                <NavLink className="bg-[#4CAF50] px-4 py-2 rounded-md text-white flex text-center font-semibold">Login</NavLink>
+            </div>
+        </nav>
+    );
+}
