@@ -1,4 +1,4 @@
-import DuaData from "../json/dua.json";
+// import DuaData from "../json/dua.json";
 import DuaBackground from "../assets/Dua.png";
 import { useState, useEffect } from "react";
 
@@ -6,12 +6,21 @@ export default function RandomDua() {
   const [currentDua, setCurrentDua] = useState(0);
   const [fade, setFade] = useState(false);
   const [animate, setAnimate] = useState(true);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    async function fetchdata() {
+      const res = await fetch("/json/dua.json");
+      const data = await res.json();
+      setData(data);
+    }
+    fetchdata();
+  }, []);
 
   function handleCurrentDua() {
     setAnimate(false); // trigger exit animation
 
     setTimeout(() => {
-      setCurrentDua((prev) => (prev >= DuaData.length - 1 ? 0 : prev + 1));
+      setCurrentDua((prev) => (prev >= data.length - 1 ? 0 : prev + 1));
       setAnimate(true);
     }, 300);
   }
@@ -20,8 +29,10 @@ export default function RandomDua() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="flex flex-col items-center justify-center mt-10 px-4">
-      <h1 className="w-full max-w-6xl text-[#0e141b] text-md sm:text-lg lg:text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4 mb-2">Dua's of the day</h1>
+    <section className="flex flex-col items-center justify-center mt-10 px-4 mb-5">
+      <h1 className="w-full max-w-6xl text-[#0e141b] text-md sm:text-lg lg:text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4 mb-2">
+        Dua's of the day
+      </h1>
       <div className="w-full max-w-6xl h-96 sm:h-64 md:h-64 lg:h-56 rounded-2xl overflow-hidden relative">
         <img
           src={DuaBackground}
@@ -44,28 +55,27 @@ export default function RandomDua() {
         >
           <div className="space-y-1 text-white">
             <h1 className="text-lg sm:text-xl md:text-xl lg:text-xl font-bold">
-              {DuaData[currentDua].title}
+              {data[currentDua]?.title}
             </h1>
 
             <p className="text-base sm:textsm font-arabic leading-relaxed">
-              {DuaData[currentDua].arabic}
+              {data[currentDua]?.arabic}
             </p>
 
             <p className="text-sm text-gray-200 italic">
-              {DuaData[currentDua].latin}
+              {data[currentDua]?.latin}
             </p>
 
             <p className="text-sm text-gray-100">
-              {DuaData[currentDua].translation}
+              {data[currentDua]?.translation}
             </p>
 
             <p className="text-xs text-gray-300">
-              {DuaData[currentDua].fawaid}
+              {data[currentDua]?.fawaid}
             </p>
           </div>
         </div>
       </div>
-      <h1>random</h1>
     </section>
   );
 }
