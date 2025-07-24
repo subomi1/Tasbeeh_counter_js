@@ -30,7 +30,7 @@ export default function Navbar() {
                 <NavLink className='font-semibold lato'>Counter</NavLink>
                 <NavLink className='font-semibold lato'>Favourites</NavLink>
                 <NavLink className='font-semibold lato'>History</NavLink>
-                <NavLink className="bg-[#14b766] px-4 py-2 rounded-md text-white flex text-center font-semibold lato">Login</NavLink>
+                <NavLink to='/login' className="bg-[#14b766] px-4 py-2 rounded-md text-white flex text-center font-semibold lato">Login</NavLink>
             </div>
         </nav>
     );
