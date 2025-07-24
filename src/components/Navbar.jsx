@@ -26,11 +26,11 @@ export default function Navbar() {
             </div>
             {click ? <img src={exitIcon} alt="" onClick={handleClick} className='w-7 sm:hidden'/> : <img src={hamIcon} alt="" onClick={handleClick} className='w-7 sm:hidden'/>}
             <div className={cssClass}>
-                <NavLink className='font-semibold'>Home</NavLink>
-                <NavLink className='font-semibold'>Counter</NavLink>
-                <NavLink className='font-semibold'>Favourites</NavLink>
-                <NavLink className='font-semibold'>History</NavLink>
-                <NavLink className="bg-[#4CAF50] px-4 py-2 rounded-md text-white flex text-center font-semibold">Login</NavLink>
+                <NavLink className='font-semibold lato'>Home</NavLink>
+                <NavLink className='font-semibold lato'>Counter</NavLink>
+                <NavLink className='font-semibold lato'>Favourites</NavLink>
+                <NavLink className='font-semibold lato'>History</NavLink>
+                <NavLink className="bg-[#14b766] px-4 py-2 rounded-md text-white flex text-center font-semibold lato">Login</NavLink>
             </div>
         </nav>
     );
