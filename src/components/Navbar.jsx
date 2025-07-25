@@ -43,7 +43,7 @@ export default function Navbar() {
       )}
       <div className={cssClass}>
         <NavLink className="font-semibold lato">Home</NavLink>
-        <NavLink className="font-semibold lato">Counter</NavLink>
+        <NavLink className="font-semibold lato" to='/categories'>Categories</NavLink>
         <NavLink className="font-semibold lato">Favourites</NavLink>
         <NavLink className="font-semibold lato">History</NavLink>
         {user ? (
