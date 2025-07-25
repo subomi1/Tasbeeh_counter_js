@@ -30,7 +30,7 @@ export default function FetchCategories() {
           </h1>
           <p className="text-center text-sm mt-1">{data.description}</p>
           <Link
-            to={`/${data.category}`}
+            to={`/categories/${data.category.replace(/\s+/g, "")}`}
             className="px-4 py-2 rounded-md text-black flex text-center font-semibold lato border-[1px] border-[#14b766] mt-5 cursor-pointer hover:bg-[#14b766] transition-all duration-300 ease-in-out mb-auto"
           >
             {`View all ${data.category}`}
