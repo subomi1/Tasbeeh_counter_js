@@ -188,6 +188,179 @@
     "category": "🌆Evening Dhikr",
     "fawaid": "Encourages mindfulness at sunset.",
     "image": "/images/evening.jpg",
-    "description": "Remembrance for peace and protection at the end of the day."
+    "description": "Remembrance for peace and protection at the end of the day.",
+    "dhikir": [
+  {
+    "title": "Ayat al-Kursi",
+    "arabic": "ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ",
+    "latin": "Allāhu lā ilāha illā huw, al-ḥayyul-qayyụm, lā ta`khużuhụ sinatuw wa lā na`ụm, lahụ mā fis-samāwāti wa mā fil-arḍ, man żallażī yasyfa'u 'indahū illā bi`iżnih, ya'lamu mā baina aidīhim wa mā khalfahum, wa lā yuḥīṭụna bisyai`im min 'ilmihī illā bimā syā`, wasi'a kursiyyuhus-samāwāti wal-arḍ, wa lā ya`ụduhụ ḥifẓuhumā, wa huwal-'aliyyul-'aẓīm",
+    "translation": "Allah - there is no deity except Him, the Ever-Living, the Sustainer of [all] existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is [presently] before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.",
+    "notes": "Read 1x",
+    "fawaid": "Whoever recites this verse in the morning will be protected until the evening. And whoever recites it in the evening will be protected until the morning.",
+    "source": "HR. at-Tirmidzi: 2879"
+  },
+  {
+    "title": "Al-Ikhlas",
+    "arabic": "قُلْ هُوَ ٱللَّهُ أَحَدٌ (1) ٱللَّهُ ٱلصَّمَدُ (2) لَمْ يَلِدْ وَلَمْ يُولَدْ (3) وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ (4)",
+    "latin": "qul huwallāhu aḥad (1) allāhuṣ-ṣamad (2) lam yalid wa lam yụlad (3) wa lam yakul lahụ kufuwan aḥad (4)",
+    "translation": "Say, \"He is Allah , [who is] One, (1) Allah , the Eternal Refuge. (2) He neither begets nor is born, (3) Nor is there to Him any equivalent.\" (4)",
+    "notes": "Read 3x",
+    "fawaid": "The Messenger of Allah, peace and blessings be upon him, said: Recite Qul huwallahu ahad, and Al-Mu'awwidhatayn (Al-Falaq and An-Nas) in the evening and morning three times, and it will suffice you (protect you) from everything.",
+    "source": "HR. Abu Dawud No. 4241"
+  },
+  {
+    "title": "Al-Falaq",
+    "arabic": "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ (1) مِن شَرِّ مَا خَلَقَ (2) وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ (3) وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِى ٱلْعُقَدِ (4) وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ (5)",
+    "latin": "qul a'ụżu birabbil-falaq (1) min syarri mā khalaq (2) wa min syarri gāsiqin iżā waqab (3) wa min syarrin-naffāṡāti fil-'uqad (4) wa min syarri ḥāsidin iżā ḥasad (5)",
+    "translation": "Say, \"I seek refuge in the Lord of daybreak (1) From the evil of that which He created (2) And from the evil of darkness when it settles (3) And from the evil of the blowers in knots (4) And from the evil of an envier when he envies.\" (5)",
+    "notes": "Read 3x",
+    "fawaid": "The Messenger of Allah, peace and blessings be upon him, said: Recite Qul huwallahu ahad, and Al-Mu'awwidhatayn (Al-Falaq and An-Nas) in the evening and morning three times, and it will suffice you (protect you) from everything.",
+    "source": "HR. Abu Dawud No. 4241"
+  },
+  {
+    "title": "An-Naas",
+    "arabic": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ (1) مَلِكِ ٱلنَّاسِ (2) إِلَٰهِ ٱلنَّاسِ (3) مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ (4) ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ (5) مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ (6)",
+    "latin": "qul a'ụżu birabbin-nās (1) malikin-nās (2) ilāhin-nās (3) min syarril-waswāsil-khannās (4) allażī yuwaswisu fī ṣudụrin-nās (5) minal-jinnati wan-nās (6)",
+    "translation": "Say, \"I seek refuge in the Lord of mankind, (1) The King of mankind. (2) The God of mankind, (3) From the evil of the whisperer who withdraws, (4) Who whispers in the breasts of mankind, (5) Of the jinn and mankind.\" (6)",
+    "notes": "Read 3x",
+    "fawaid": "The Messenger of Allah, peace and blessings be upon him, said: Recite Qul huwallahu ahad, and Al-Mu'awwidhatayn (Al-Falaq and An-Nas) in the evening and morning three times, and it will suffice you (protect you) from everything.",
+    "source": "HR. Abu Dawud No. 4241"
+  },
+  {
+    "title": "Entering the Evening in the Kingdom of Allah and Seeking His Protection",
+    "arabic": "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ للهِ، وَالْحَمْدُ للهِ، لَا إِلَهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُبِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُبِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُبِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ",
+    "latin": "amsaynaa wa amsal mulku lillah walhamdulillah, laa ilaha illallah wahdahu laa syarika lah, lahul mulku walahul hamdu wa huwa 'ala kulli syai-in qodir. robbi as-aluka khoiro maa fii hadzihil lailah wa khoiro maa ba'dahaa, wa a'udzu bika min syarri maa fii hadzihil lailah wa syarri maa ba'dahaa. robbi a'udzu bika minal kasali wa suu-il kibar. robbi a'udzu bika min 'adzabin fin naari wa 'adzabin fil qobri",
+    "translation": "We have entered the evening and the dominion belongs to Allah, and all praise is for Allah. There is no deity worthy of worship except Allah alone, He has no partner. To Him belongs the dominion and to Him is praise, and He is over all things competent. My Lord, I ask You for the good of this night and the good of what follows it, and I seek refuge in You from the evil of this night and the evil of what follows it. My Lord, I seek refuge in You from laziness and the evil of old age. My Lord, I seek refuge in You from the punishment of the Fire and the punishment of the grave.",
+    "notes": "Read 1x",
+    "fawaid": "Seeking protection from evil is prioritized, the principle that shows the importance of this is: \"Preventing harm is more important and prioritized than bringing about good.\"",
+    "source": "HR. Muslim No. 2723 (75), Abu Dawud No. 5071, and at-Tirmidzi 3390, sahih from Abdullah Ibn Mas'ud"
+  },
+  {
+    "title": "Entering the Evening by Seeking Allah's Mercy",
+    "arabic": "اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا،وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيْرُ",
+    "latin": "allahumma bika amsaynaa wa bika ash-bahnaa wa bika nahyaa wa bika namuutu wa ilaikal mashiir",
+    "translation": "O Allah, by Your grace and help we have entered the evening, and by Your grace and help we enter the morning. By Your grace and help we live and by Your will we die. And to You is the final return (of all creatures).",
+    "notes": "Read 1x",
+    "fawaid": "Everything we do from morning to evening, from the beginning of our lives until we die, is all under Allah's control and to Him we return.",
+    "source": "HR. al-Bukhari in al-Abadul Mufrad No. 1199, this wording is the wording of al-Bukhari at-Tirmidzi No. 3391, Abu Dawud No. 5068, Ahmad 11/354, Ibn Majah No. 3868"
+  },
+  {
+    "title": "The Master of Seeking Forgiveness",
+    "arabic": "اَللَّهُمَّ أَنْتَ رَبِّيْ ، لَا إِلٰـهَ إِلاَّ أَنْتَ خَلَقْتَنِيْ وَأَنَا عَبْدُكَ ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ ، أَعُوْذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ ، أَبُوْءُ لَكَ بِنِعْمتِكَ عَلَيَّ ، وَأَبُوْءُ بِذَنْبِيْ فَاغْفِرْ لِيْ ، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ",
+    "latin": "allahumma anta rabbii laa ilaaha illaa anta khalaqtanii wa anna 'abduka wa anaa 'alaa 'ahdika wa wa'dika mastatha'tu a'uudzu bika min syarri maa shana'tu abuu u laka bini' matika 'alayya wa abuu-u bidzanbii faghfir lii fa innahu laa yaghfirudz dzunuuba illa anta",
+    "translation": "O Allah, You are my Lord, there is no deity worthy of worship except You, You created me and I am Your servant. I will be true to my covenant and promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favor upon me and I acknowledge my sin, therefore, forgive me. Indeed, there is no one who can forgive sins except You.",
+    "notes": "Read 1x",
+    "fawaid": "Whoever recites it with certainty in the evening, and then he dies, he will enter Paradise, and likewise if (recited) in the morning.",
+    "source": "HR. al-Bukhari No. 6306, 6323, Ahmad IV/122-125, an-Nasa'i VIII/279-280"
+  },
+  {
+    "title": "Prayer for Health and Protection",
+    "arabic": "اَللَّهُمَّ عَافِنِيْ فِيْ بَدَنِيْ ، اَللَّهُمَّ عَافِنِيْ فِيْ سَمْعِيْ ، اَللَّهُمَّ عَافِنِيْ فِيْ بَصَرِيْ ، لَا إِلَـهَ إِلَّا أَنْتَ ، اَللَّهُمَّ إِنِّيْ أَعُوْذُ بِكَ مِنَ الْكُفْرِوَالْفَقْرِ ، وَأَعُوْذُ بِكَ مِنْ عَذَابِ الْقَبْرِ ، لَا إِلَـهَ إِلَّا أَنْتَ",
+    "latin": "allaahumma 'aafinii fii badanii, allaahumma 'aafinii fii sam'ii, allaahumma 'aafinii fii bashorii, laa ilaaha illaa anta. allaahumma inni a'uudzu bika minal kufri wal faqr, allaahumma inni a'uudzu bika min 'adzaabil qobr, laa ilaaha illaa anta",
+    "translation": "O Allah, protect my body (from illness and from what I do not want). O Allah, protect my hearing (from illness and disobedience or from what I do not want). O Allah, protect my sight, there is no deity worthy of worship except You. O Allah, indeed I seek refuge in You from disbelief and poverty. I seek refuge in You from the punishment of the grave, there is no deity worthy of worship except You.",
+    "notes": "Read 1x",
+    "fawaid": "By asking Allah to grant us well-being in our bodies, we ask to be healed from all physical and spiritual illnesses, so that we have a healthy body and a pure heart, and therefore use this healthy body in a way that pleases Allah.",
+    "source": "HR. al-Bukhari in Shahiib al-Adabil Mufrad No. 701, Abu Dawud No. 5090, Ahmad V/42, hasan"
+  },
+  {
+    "title": "Prayer for Safety in This World and the Hereafter",
+    "arabic": "اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَاْلآخِرَةِ، اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِيْنِيْ وَدُنْيَايَ وَأَهْلِيْ وَمَالِيْ اللَّهُمَّ اسْتُرْ عَوْرَاتِى وَآمِنْ رَوْعَاتِى. اَللَّهُمَّ احْفَظْنِيْ مِنْ بَيْنِ يَدَيَّ، وَمِنْ خَلْفِيْ، وَعَنْ يَمِيْنِيْ وَعَنْ شِمَالِيْ، وَمِنْ فَوْقِيْ، وَأَعُوْذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِيْ",
+    "latin": "allahumma innii as-alukal 'afwa wal 'aafiyah fid dunyaa wal aakhiroh. allahumma innii as-alukal 'afwa wal 'aafiyah fii diinii wa dun-yaaya wa ahlii wa maalii. allahumas-tur 'awrootii wa aamin row'aatii. allahummahfazh-nii mim bayni yadayya wa min kholfii wa 'an yamiinii wa 'an syimaalii wa min fawqii wa a'udzu bi 'azhomatik an ugh-taala min tahtii",
+    "translation": "O Allah, indeed I ask You for well-being and safety in this world and the Hereafter. O Allah, indeed I ask You for well-being and safety in my religion, my world, my family and my wealth. O Allah, cover my flaws (faults and things that are not appropriate for others to see) and calm me from fear. O Allah, protect me from the front, behind, right, left and above me. I seek refuge in Your greatness, so that I am not snatched from below me (by snakes or swallowed by the earth, etc., which would cause me to fall).",
+    "notes": "Read 1x",
+    "fawaid": "The Messenger of Allah, peace and blessings be upon him, never left this supplication in the morning and evening. It contains protection and safety for religion, the world, family, and wealth from various kinds of disturbances that come from all directions.",
+    "source": "HR. al-Bukhari in al-Abadul Mufrad No. 1200, Abu Dawud No. 5074, an-Nasa'i VII/282, Ibn Majah No. 3871, al-Hakim 1/517-518, and others from Ibn Umar radhiyallahu 'anhumaa"
+  },
+  {
+    "title": "Prayer for Seeking Protection from the Whispers of Satan",
+    "arabic": "اَللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَاوَاتِ وَاْلأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيْكَهُ، أَشْهَدُ أَنْ لاَ إِلَـهَ إِلاَّ أَنْتَ، أَعُوْذُ بِكَ مِنْ شَرِّ نَفْسِيْ، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَى نَفْسِيْ سُوْءًا أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ",
+    "latin": "allahumma 'aalimal ghoybi wasy-syahaadah faathiros samaawaati wal ardh. robba kulli syai-in wa maliikah. asyhadu alla ilaha illa anta. a'udzu bika min syarri nafsii wa min syarrisy-syaythooni wa syirkihi, wa an aqtarifa 'alaa nafsii suu-an aw ajurrohu ilaa muslim",
+    "translation": "O Allah, Knower of the unseen and the seen, Creator of the heavens and the earth, Lord of all things and their Sovereign. I bear witness that there is no deity worthy of worship except You. I seek refuge in You from the evil of myself, Satan and his soldiers (temptations to commit shirk against Allah), and I (seek refuge in You) from committing evil against myself or dragging it to a Muslim.",
+    "notes": "Read 1x",
+    "fawaid": "The Messenger of Allah, peace and blessings be upon him, said to Abu Bakr as-Siddiq, may Allah be pleased with him, \"Say it morning and evening and when you want to sleep.\"",
+    "source": "HR. al-Bukhari in al-Abadul Mufrad No. 1202, at-Tirmidzi No. 3392 and Abu Dawud No. 5067"
+  },
+  {
+    "title": "Remembrance to Be Protected from All Dangers",
+    "arabic": "بِسْمِ اللَّهِ الَّذِى لاَ يَضُرُّ مَعَ اسْمِهِ شَىْءٌ فِى الأَرْضِ وَلاَ فِى السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+    "latin": "bismillahilladzi laa yadhurru ma'asmihi syai-un fil ardhi wa laa fis samaa' wa huwas samii'ul 'aliim",
+    "translation": "In the name of Allah, with whose name nothing in the earth or the heavens can cause harm, and He is the All-Hearing, the All-Knowing.",
+    "notes": "Read 3x",
+    "fawaid": "Whoever recites it three times in the morning and evening, nothing will harm him.",
+    "source": "HR. at-Tirmidzi No. 3388, Abu Dawud No. 5088, Ibn Majah No. 3869, al-Hakim 1/514, and Ahmad No. 446 and 474"
+  },
+  {
+    "title": "Declaration of Contentment with Allah, Islam, and the Prophet Muhammad (Peace Be Upon Him)",
+    "arabic": "رَضِيْتُ بِاللهِ رَبًّا، وَبِاْلإِسْلاَمِ دِيْنًا، وَبِمُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ نَبِيًّا",
+    "latin": "rodhiitu billaahi robbaa wa bil-islaami diinaa, wa bi-muhammadin shallallaahu 'alaihi wa sallama nabiyyaa",
+    "translation": "I am pleased with Allah as my Lord, Islam as my religion, and Muhammad, peace and blessings be upon him, as my Prophet.",
+    "notes": "Read 3x",
+    "fawaid": "Whoever recites it three times in the morning and evening, Allah will grant His pleasure to him on the Day of Resurrection.",
+    "source": "HR. Ahmad IV/337, Abu Dawud No. 5072, at-Tirmidzi No. 3389, Ibn Majah No. 3870, an-Nasa'i in 'Amalul Yaum wal Lailah No. 4 and Ibnus Sunni No. 68"
+  },
+  {
+    "title": " Asking for Guidance from Allah",
+    "arabic": "يَا حَيُّ يَا قَيُّوْمُ بِرَحْمَتِكَ أَسْتَغِيْثُ، وَأَصْلِحْ لِيْ شَأْنِيْ كُلَّهُ وَلاَ تَكِلْنِيْ إِلَى نَفْسِيْ طَرْفَةَ عَيْنٍ أَبَدًا",
+    "latin": "yaa hayyu yaa qoyyum, bi-rohmatika as-taghiits, wa ash-lih lii sya'nii kullahu wa laa takilnii ilaa nafsii thorfata 'ainin abadan",
+    "translation": "O Ever-Living, O Self-Sustaining, by Your mercy I seek help, rectify all my affairs and do not leave me to myself even for the blink of an eye.",
+    "notes": "Read 1x",
+    "fawaid": "The meaning of this supplication is that humans are in dire need of Allah and pray that Allah does not abandon them even for a moment.",
+    "source": "HR. an-Nasa'i in 'Amalul Yaum wal Lailah No. 575, and al-Hakim 1/545, see Shahiih at-Targhiib wat Tarhiib 1/417 No. 661, Ash-shahiihah No. 227, hasan"
+  },
+  {
+    "title": "Entering the Evening on the Natural Disposition of Islam",
+    "arabic": "أَمْسَيْنَا عَلَى فِطْرَةِ اْلإِسْلاَمِ وَعَلَى كَلِمَةِ اْلإِخْلاَصِ، وَعَلَى دِيْنِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، وَعَلَى مِلَّةِ أَبِيْنَا إِبْرَاهِيْمَ، حَنِيْفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِيْنَ",
+    "latin": "amsaynaa 'ala fithrotil islaam wa 'alaa kalimatil ikhlaash, wa 'alaa diini nabiyyinaa Muhammadin shallallahu 'alaihi wa sallam, wa 'alaa millati abiina Ibraahiima haniifam muslimaaw wa maa kaana minal musyrikin",
+    "translation": "In the evening we are upon the fitrah of Islam, the word of sincerity (the testimony of faith), the religion of our Prophet Muhammad, peace and blessings be upon him, and the religion of our father Abraham, who stood upon the straight path, a Muslim, and was not among the polytheists.",
+    "notes": "Read 1x",
+    "fawaid": "'Fitratil Islam' means upon the Sunnah, 'kalimatil ikhlas' means the testimony of faith, and 'hanifan' means a heart inclined towards the straight path and goodness.",
+    "source": "HR. Ahmad III/406, 407, ad-Darimi II/292 and Ibnus Sunni in Amalul Yaum wal Lailah No. 34, Misykaatul Mashaabiih No. 2415, Shahiihal-Jaami'ish Shaghiir No. 4674, sahih"
+  },
+  {
+    "title": "Remembrance of the Oneness of Allah",
+    "arabic": "لاَ إِلَـهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرُ",
+    "latin": "laa ilaha illallah wahdahu laa syarika lah, lahul mulku walahul hamdu wa huwa 'ala kulli syai-in qodiir",
+    "translation": "There is no deity worthy of worship except Allah alone, He has no partner. To Him belongs the dominion and all praise. He is over all things competent.",
+    "notes": "Read 1x or 10x in the morning, Read 100x daily",
+    "fawaid": "Whoever says this dhikr 100 times a day, it is like freeing 10 slaves, 100 good deeds are recorded for him, 100 mistakes are erased for him, he will be protected from the disturbances of Satan from morning until evening, and no one is better than what he does except someone who practices more than that.",
+    "source": "HR al-Bukhari No. 3293 and 6403, Muslim IV/2071 No. 2691 (28), at-Tirmidzi No. 3468, Ibn Majah No. 3798"
+  },
+  {
+    "title": "Reciting Praise to Allah",
+    "arabic": "سُبْحَانَ اللهِ وَبِحَمْدِهِ عَدَدَ خَلْقَهِ وَرِضَى نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
+    "latin": "subhanallahi wa bihamdihi 'adada khalqihi wa ridha nafsihi wa zinata 'arsyihi wa midada kalimatihi",
+    "translation": "Glory be to Allah, as many as His creations, Glory be to Allah as much as His pleasure, Glory be to Allah as much as the weight of His Throne, and as much as the ink of His written words.",
+    "notes": "Read 3x",
+    "fawaid": "The Prophet, peace and blessings be upon him, told Juwairiyah that the dhikr above has surpassed the dhikr recited by Juwairiyah from after Fajr until Dhuha time.",
+    "source": "HR. Muslim No. 2726. Syarah Muslim XVII/44. From Juwairiyah bint al-Harith radhiyallahu 'anha"
+  },
+  {
+    "title": "Daily Praise (Tasbih and Alhamdulillah)",
+    "arabic": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+    "latin": "subhaanallahi wa bihamdihi",
+    "translation": "Glory be to Allah, and praise be to Him.",
+    "notes": "Read 100x",
+    "fawaid": "Whoever says \"Subhanallah wa bihamdihi\" 100 times in the morning and evening, then nothing will come on the Day of Judgment better than what he has done except one who says the same or more than that.",
+    "source": "HR. Muslim No. 2691 and No. 2692, from Abu Hurairah radhiyallahu 'anhu Syarah Muslim XVII/17-18, Shahiih at-Targhiib wat Tarhiib 1/413 No. 653"
+  },
+  {
+    "title": "Seeking Forgiveness 100 Times a Day",
+    "arabic": "أَسْتَغْفِرُ الله وَأَتُوْبُ إِلَيْهِ",
+    "latin": "astagh-firullah wa atuubu ilaih",
+    "translation": "I seek forgiveness from Allah and repent to Him.",
+    "notes": "Read 100x daily",
+    "fawaid": "Ibn 'Umar said: The Messenger of Allah, peace and blessings be upon him, said: 'O people, repent to Allah, for indeed I repent to Him one hundred times a day.'",
+    "source": "HR. al-Bukhari/Fat-hul Baari XI/101 and Muslim No. 2702"
+  },
+  {
+    "title": "Prayer for Protection from the Evil of Allah's Creation",
+    "arabic": "أَعُوْذُ بِكَلِمَاتِ اللهِ التَّآمَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+    "latin": "'audzu bi kalimaatillahittaamaati min syarri ma khalaq",
+    "translation": "I seek refuge in the perfect words of Allah from the evil of what He has created.",
+    "notes": "Read 3x",
+    "fawaid": "Whoever recites it three times in the evening, they will not be afflicted with fever that night.",
+    "source": "HR. Ahmad 11/290, an-Nasa'i in 'Amalul Yaum wal Lailah No. 596, Shahiih at-Targhiib wat Tarhiib 1/412 No. 652, Shahiih al-Jaami 'ish Shaghiir No. 6427"
+  }
+]
   }
 ]

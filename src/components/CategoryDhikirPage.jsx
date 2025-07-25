@@ -27,7 +27,7 @@ export default function CategoryDhikirPage() {
                 {data.category}
               </h1>
               <ul className="flex flex-wrap gap-3 justify-center">
-                {data.dhikir.map((data) => (
+                {data?.dhikir?.map((data) => (
                   <li
                     key={data.title}
                     className="md:w-80 border-2 border-[#14b766] p-3 flex flex-col rounded-md"
