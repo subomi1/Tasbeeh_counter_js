@@ -1,19 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import FetchContext from "../store/FetchContext";
 
 export default function CategoryDhikirPage() {
-  const [data, setData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
+    const fetchCtx = useContext(FetchContext);
+    const data = fetchCtx.data;
   const params = useParams();
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch("/json/dhikir.json");
-      const res = await response.json();
-      setData(res);
-    }
-    fetchData();
-  }, []);
   // setFilteredData(data[])
   console.log(params.categoryName);
 
@@ -41,8 +34,8 @@ export default function CategoryDhikirPage() {
                     <p className="font-light text-xs sm:text-sm">
                       {data.notes}
                     </p>
-                    <Link className="ml-auto mt-auto">
-                        Count your
+                    <Link to={`/categories/${params.categoryName}/${data.title.replace(/\s+/g, "")}`} className="ml-auto mt-auto px-4 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition hover:border-[1px] hover:border-[black]">
+                        Count
                     </Link>
                   </li>
                 ))}

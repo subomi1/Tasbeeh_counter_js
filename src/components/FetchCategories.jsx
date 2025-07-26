@@ -1,16 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import FetchContext from "../store/FetchContext";
 
 export default function FetchCategories() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    async function fetchdata() {
-      const res = await fetch("/json/dhikir.json");
-      const data = await res.json();
-      setData(data);
-    }
-    fetchdata();
-  }, []);
+  const fetchCtx = useContext(FetchContext);
+  const data = fetchCtx.data;
+  console.log(data);
   return (
     <div className="flex justify-center flex-wrap gap-3">
       {data?.map((data) => (

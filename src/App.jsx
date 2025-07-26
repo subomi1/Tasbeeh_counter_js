@@ -5,6 +5,7 @@ import Homepage from './pages/HomePage';
 import Register from './components/Register';
 import Categories from './components/Categories';
 import CategoryDhikirPage from './components/CategoryDhikirPage';
+import DhikirPage from './components/DhikirPage';
 
 function App() {
   const route = createRoutesFromElements(
@@ -14,6 +15,7 @@ function App() {
       <Route path='/register' element={<Register/>}/>
       <Route path='/categories' element={<Categories/>}/>
       <Route path='/categories/:categoryName' element={<CategoryDhikirPage/>}/>
+      <Route path='/categories/:categoryName/:dhikir' element={<DhikirPage/>}/>
     </Route>
   );
 
