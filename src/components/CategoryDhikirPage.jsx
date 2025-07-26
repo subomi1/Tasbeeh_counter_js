@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import FetchContext from "../store/FetchContext";
