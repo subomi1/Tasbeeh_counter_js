@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 import FetchContext from "../store/FetchContext";
 
 export default function CategoryDhikirPage() {
-    const fetchCtx = useContext(FetchContext);
-    const data = fetchCtx.data;
+  const fetchCtx = useContext(FetchContext);
+  const data = fetchCtx.data;
   const params = useParams();
-  // setFilteredData(data[])
   console.log(params.categoryName);
 
   return (
@@ -34,9 +33,16 @@ export default function CategoryDhikirPage() {
                     <p className="font-light text-xs sm:text-sm">
                       {data.notes}
                     </p>
-                    <Link to={`/categories/${params.categoryName}/${data.title.replace(/\s+/g, "")}`} className="ml-auto mt-auto px-4 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition hover:border-[1px] hover:border-[black]">
+                    <div className="flex items-center mt-5">
+                      <Link
+                        to={`/categories/${
+                          params.categoryName
+                        }/${data.title.replace(/\s+/g, "")}`}
+                        className="px-4 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition hover:border-[1px] hover:border-[black] ml-auto mt-auto"
+                      >
                         Count
-                    </Link>
+                      </Link>
+                    </div>
                   </li>
                 ))}
               </ul>

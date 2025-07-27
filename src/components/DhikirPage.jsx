@@ -1,25 +1,25 @@
 import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import FetchContext from "../store/FetchContext";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 
 export default function DhikirPage() {
   const fetchCtx = useContext(FetchContext);
   const data = fetchCtx.data;
   const params = useParams();
   const [current, setCurrent] = useState("arabic");
-//   const [badge, setBadge] = useState(0);
-  const count = useSelector(state => state.count);
-  const badge = useSelector(state => state.totalCount);
-  const dispatch = useDispatch()
+  const count = useSelector((state) => state.count);
+  const [badge, setBadge] = useState(0); 
+  const dispatch = useDispatch();
   function handleAddAction(totalCount) {
-    dispatch({type: 'increment', totalAmount: totalCount})
-    // if (count < totalCount) {
-    //   setCount((prev) => prev + 1);
-    // } else if (count == totalCount) {
-    //   setCount(0);
-    //   setBadge((prev) => prev + 1);
-    // }
+    dispatch({ type: "increment", totalAmount: totalCount});
+    if (count + 1 == totalCount) {
+        setBadge((prev) => prev + 1)
+    }
+  }
+
+  function handleTotal(maxCount) {
+    
   }
   let cssClasses = "border-b-4 border-b-amber-500 rounded-md";
   return (
@@ -91,7 +91,7 @@ export default function DhikirPage() {
                         {/* Inner white circle to make the ring effect */}
                         <div
                           className="absolute inset-[8%] bg-gray-50 rounded-full z-20 flex flex-col items-center justify-center"
-                          onClick={() => handleAddAction(data.count)}
+                          onClick={() => handleAddAction(data.count, data.title)}
                         >
                           <p className="text-3xl font-bold text-gray-800">
                             {count}
@@ -102,6 +102,7 @@ export default function DhikirPage() {
 
                       {/* Red badge */}
                       <div className="absolute -top-3 -right-3 bg-red-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold z-30 shadow-md">
+                        {() => handleTotal(data.count)}
                         {badge}
                       </div>
                     </div>
