@@ -1,14 +1,27 @@
 import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import FetchContext from "../store/FetchContext";
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function DhikirPage() {
   const fetchCtx = useContext(FetchContext);
   const data = fetchCtx.data;
   const params = useParams();
-  const [current, setCurrent] = useState("");
+  const [current, setCurrent] = useState("arabic");
+//   const [badge, setBadge] = useState(0);
+  const count = useSelector(state => state.count);
+  const badge = useSelector(state => state.totalCount);
+  const dispatch = useDispatch()
+  function handleAddAction(totalCount) {
+    dispatch({type: 'increment', totalAmount: totalCount})
+    // if (count < totalCount) {
+    //   setCount((prev) => prev + 1);
+    // } else if (count == totalCount) {
+    //   setCount(0);
+    //   setBadge((prev) => prev + 1);
+    // }
+  }
   let cssClasses = "border-b-4 border-b-amber-500 rounded-md";
-  //   if
   return (
     <section className="p-5">
       {data.map((data) =>
@@ -28,17 +41,7 @@ export default function DhikirPage() {
                       } cursor-pointer`}
                       onClick={() => setCurrent("pronounciation")}
                     >
-                      Pronounciation
-                    </p>
-                    <p
-                      className={`transition-all duration-300 ease-in-out ${
-                        current === "meaning"
-                          ? cssClasses + " translate-y-0 opacity-100"
-                          : "opacity-70"
-                      } cursor-pointer`}
-                      onClick={() => setCurrent("meaning")}
-                    >
-                      Meaning
+                      Transliteration
                     </p>
                     <p
                       className={`transition-all duration-300 ease-in-out ${
@@ -50,8 +53,59 @@ export default function DhikirPage() {
                     >
                       Arabic
                     </p>
+                    <p
+                      className={`transition-all duration-300 ease-in-out ${
+                        current === "meaning"
+                          ? cssClasses + " translate-y-0 opacity-100"
+                          : "opacity-70"
+                      } cursor-pointer`}
+                      onClick={() => setCurrent("meaning")}
+                    >
+                      Meaning
+                    </p>
                   </div>
                   <hr className="h-0.5 bg-black mt-[-2px]" />
+                  <h3 className="mt-10 text-center text-sm">
+                    {current === "pronounciation"
+                      ? data.latin
+                      : current === "arabic"
+                      ? data.arabic
+                      : current === "meaning"
+                      ? data.translation
+                      : null}
+                  </h3>
+                  <div className="flex justify-center items-center w-full h-80">
+                    <div className="relative w-36 h-36">
+                      {/* Outer ring */}
+                      <div className="w-full h-full rounded-full bg-gray-200 relative">
+                        {/* Progress arc */}
+                        <div
+                          className="absolute inset-0 rounded-full z-10"
+                          style={{
+                            background: `conic-gradient(#22c55e ${
+                              (count / data.count) * 100 * 3.6
+                            }deg, #e5e7eb 0deg)`,
+                          }}
+                        ></div>
+
+                        {/* Inner white circle to make the ring effect */}
+                        <div
+                          className="absolute inset-[8%] bg-gray-50 rounded-full z-20 flex flex-col items-center justify-center"
+                          onClick={() => handleAddAction(data.count)}
+                        >
+                          <p className="text-3xl font-bold text-gray-800">
+                            {count}
+                          </p>
+                          <p className="text-sm text-gray-500">/{data.count}</p>
+                        </div>
+                      </div>
+
+                      {/* Red badge */}
+                      <div className="absolute -top-3 -right-3 bg-red-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold z-30 shadow-md">
+                        {badge}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ) : null
             )

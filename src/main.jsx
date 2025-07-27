@@ -3,11 +3,15 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { FetchContextProvider } from "./store/FetchContext.jsx";
+import { Provider } from "react-redux";
+import store from "./store/Redux.js";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <FetchContextProvider>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </FetchContextProvider>
   </StrictMode>
 );
