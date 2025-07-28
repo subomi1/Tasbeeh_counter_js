@@ -2,12 +2,17 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import FetchContext from "../store/FetchContext";
+import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 
 export default function CategoryDhikirPage() {
   const fetchCtx = useContext(FetchContext);
   const data = fetchCtx.data;
   const params = useParams();
   console.log(params.categoryName);
+
+  function handleRecents() {
+    
+  }
 
   return (
     <section className="p-5 ">
@@ -39,6 +44,7 @@ export default function CategoryDhikirPage() {
                           params.categoryName
                         }/${data.title.replace(/\s+/g, "")}`}
                         className="px-4 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition hover:border-[1px] hover:border-[black] ml-auto mt-auto"
+                        onClick={() => handleRecents()}
                       >
                         Count
                       </Link>
