@@ -15,7 +15,7 @@ export default function CategoryDhikirPage() {
         {data?.map((data) =>
           data?.category?.replace(/\s+/g, "") === params.categoryName ? (
             <li key={data.category}>
-              <h1 className="text-center font-bold lato text-2xl sm:text-4xl mb-8">
+              <h1 className="text-center font-bold lato text-2xl sm:text-4xl mb-8 border-b-2">
                 {data.category}
               </h1>
               <ul className="flex flex-wrap gap-3 justify-center">
@@ -28,7 +28,7 @@ export default function CategoryDhikirPage() {
                       {data.title}
                     </h1>
                     <p className="mb-5 font-semibold text-xs sm:text-sm ">
-                      {data.fawaid}
+                      {data.fawaid || "No description"}
                     </p>
                     <p className="font-light text-xs sm:text-sm">
                       {data.notes}

@@ -17,10 +17,6 @@ export default function DhikirPage() {
         setBadge((prev) => prev + 1)
     }
   }
-
-  function handleTotal(maxCount) {
-    
-  }
   let cssClasses = "border-b-4 border-b-amber-500 rounded-md";
   return (
     <section className="p-5">
