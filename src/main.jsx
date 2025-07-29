@@ -5,12 +5,15 @@ import App from "./App.jsx";
 import { FetchContextProvider } from "./store/FetchContext.jsx";
 import { Provider } from "react-redux";
 import store from "./store/Redux.js";
+import { AuthProvider } from "./store/AuthContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <FetchContextProvider>
       <Provider store={store}>
-        <App />
+        <AuthProvider>
+          <App />
+        </AuthProvider>
       </Provider>
     </FetchContextProvider>
   </StrictMode>

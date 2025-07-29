@@ -10,36 +10,63 @@ import { db } from "../firebase";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../store/AuthContext";
 export default function MostRecent() {
   const [data, setData] = useState([]);
   const auth = getAuth();
+  const { user, loading } = useAuth();
+
+  //   useEffect(() => {
+  //     const unsubscribe = onAuthStateChanged(auth, async (user) => {
+  //       if (user) {
+  //         const q = query(
+  //           collection(db, "recentlyViewed"),
+  //           where("id", "==", user.uid),
+  //           orderBy("timestamp", "desc"),
+  //           limit(3)
+  //         );
+
+  //         try {
+  //           const querySnapshot = await getDocs(q);
+  //           const results = querySnapshot.docs.map((doc) => doc.data());
+  //           setData(results);
+  //         } catch (error) {
+  //           console.error("Error fetching data:", error);
+  //         }
+  //       } else {
+  //         setData([]);
+  //         console.log("No user signed in.");
+  //       }
+  //     });
+
+  //     // Cleanup on unmount
+  //     return () => unsubscribe();
+  //   }, []);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        const q = query(
-          collection(db, "recentlyViewed"),
-          where("id", "==", user.uid),
-          orderBy("timestamp", "desc"),
-          limit(3)
-        );
+    if (!user || loading) return;
 
-        try {
-          const querySnapshot = await getDocs(q);
-          const results = querySnapshot.docs.map((doc) => doc.data());
-          setData(results);
-        } catch (error) {
-          console.error("Error fetching data:", error);
-        }
-      } else {
-        setData([]);
-        console.log("No user signed in.");
+    const fetchData = async () => {
+      const q = query(
+        collection(db, "recentlyViewed"),
+        where("id", "==", user.uid), // ✅ use correct field
+        orderBy("timestamp", "desc"),
+        limit(3)
+      );
+
+      try {
+        const querySnapshot = await getDocs(q);
+        const results = querySnapshot.docs.map((doc) => doc.data());
+        setData(results);
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
-    });
+    };
 
-    // Cleanup on unmount
-    return () => unsubscribe();
-  }, []);
+    fetchData();
+  }, [user, loading]); // 👈 run when user or loading changes
+
+  if (loading) return <p>Loading...</p>;
 
   console.log(data);
   return (
