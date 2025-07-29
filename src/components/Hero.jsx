@@ -16,8 +16,8 @@ export default function Hero() {
           className="w-full h-full object-cover object-top"
         />
       </div>
-      <h1 className="font-bold mt-7 sm:text-3xl lato text-2xl">Remember Allah with Every Click</h1>
-      <p className="mt-2 text-[#14b766] lato">Your companion for daily adhkar and reflection.</p>
+      <h1 className="font-bold mt-7 sm:text-3xl lato text-xl text-center">Remember Allah with Every Click</h1>
+      <p className="mt-2 text-[#14b766] lato text-xs text-center sm:text-sm">Your companion for daily adhkar and reflection.</p>
     </section>
   );
 }
