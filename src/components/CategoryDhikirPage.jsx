@@ -2,16 +2,35 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import FetchContext from "../store/FetchContext";
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { db } from "../firebase";
 
 export default function CategoryDhikirPage() {
   const fetchCtx = useContext(FetchContext);
   const data = fetchCtx.data;
   const params = useParams();
   console.log(params.categoryName);
+  const auth = getAuth();
 
-  function handleRecents() {
-    
+  function handleRecents(id, title, fawaid, notes, catName) {
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        const recentref = doc(db, "recentlyViewed", `${id}_${user.uid}`);
+        await setDoc(recentref, {
+            id : user.uid,
+            title,
+            fawaid,
+            notes,
+            fileId: id,
+            catName,
+            timestamp: serverTimestamp()
+        })
+        console.log("User is signed in, UID:", user.uid);
+      } else {
+        console.log("No user signed in.");
+      }
+    });
   }
 
   return (
@@ -26,7 +45,7 @@ export default function CategoryDhikirPage() {
               <ul className="flex flex-wrap gap-3 justify-center">
                 {data?.dhikir?.map((data) => (
                   <li
-                    key={data.title}
+                    key={data.id}
                     className="md:w-80 border-2 border-[#14b766] p-3 flex flex-col rounded-md"
                   >
                     <h1 className="text-md sm:text-lg lg:text-lg font-bold mb-3">
@@ -44,7 +63,15 @@ export default function CategoryDhikirPage() {
                           params.categoryName
                         }/${data.title.replace(/\s+/g, "")}`}
                         className="px-4 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition hover:border-[1px] hover:border-[black] ml-auto mt-auto"
-                        onClick={() => handleRecents()}
+                        onClick={() =>
+                          handleRecents(
+                            data.id,
+                            data.title,
+                            data.fawaid,
+                            data.notes,
+                            params.categoryName
+                          )
+                        }
                       >
                         Count
                       </Link>

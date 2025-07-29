@@ -8,7 +8,7 @@ export default function Hero() {
     //     </div>
     // </section>
 
-    <section className="flex flex-col items-center justify-center mt-10 px-4">
+    <section className="flex flex-col items-center justify-center mt-10 px-4 mb-5">
       <div className="w-full max-w-6xl bg-black h-64 sm:h-72 md:h-80 lg:h-80 rounded-2xl overflow-hidden">
         <img
           src={HeroImg}
@@ -16,7 +16,7 @@ export default function Hero() {
           className="w-full h-full object-cover object-top"
         />
       </div>
-      <h1 className="font-bold mt-7 text-3xl lato">Remember Allah with Every Click</h1>
+      <h1 className="font-bold mt-7 sm:text-3xl lato text-2xl">Remember Allah with Every Click</h1>
       <p className="mt-2 text-[#14b766] lato">Your companion for daily adhkar and reflection.</p>
     </section>
   );
