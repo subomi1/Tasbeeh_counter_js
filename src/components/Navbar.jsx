@@ -61,7 +61,7 @@ export default function Navbar() {
         <NavLink className="font-semibold lato" to="/categories">
           Categories
         </NavLink>
-        <NavLink className="font-semibold lato">Favourites</NavLink>
+        <NavLink className="font-semibold lato" to="/favourite">Favourites</NavLink>
         <NavLink className="font-semibold lato">History</NavLink>
         {user ? (
           <div className={flexClass}>

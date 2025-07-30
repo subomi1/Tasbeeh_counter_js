@@ -5,6 +5,8 @@ import FetchContext from "../store/FetchContext";
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { db } from "../firebase";
+import { useAuth } from "../store/AuthContext";
+import FavouriteButton from "./FavouriteButton";
 
 export default function CategoryDhikirPage() {
   const fetchCtx = useContext(FetchContext);
@@ -12,6 +14,8 @@ export default function CategoryDhikirPage() {
   const params = useParams();
   console.log(params.categoryName);
   const auth = getAuth();
+  const {user, loading} = useAuth();
+  
 
   function handleRecents(id, title, fawaid, notes, catName) {
     onAuthStateChanged(auth, async (user) => {
@@ -57,7 +61,8 @@ export default function CategoryDhikirPage() {
                     <p className="font-light text-xs sm:text-sm">
                       {data.notes}
                     </p>
-                    <div className="flex items-center mt-5">
+                    <div className="flex items-center mt-auto">
+                        <FavouriteButton id={data.id} title={data.title} notes={data.notes} fawaid={data.fawaid} catName={params.categoryName}/>
                       <Link
                         to={`/categories/${
                           params.categoryName
@@ -69,7 +74,7 @@ export default function CategoryDhikirPage() {
                             data.title,
                             data.fawaid,
                             data.notes,
-                            params.categoryName
+                            params.categoryName,
                           )
                         }
                       >

@@ -6,6 +6,7 @@ import Register from './components/Register';
 import Categories from './components/Categories';
 import CategoryDhikirPage from './components/CategoryDhikirPage';
 import DhikirPage from './components/DhikirPage';
+import FavouritePage from './components/FavouritePage';
 
 function App() {
   const route = createRoutesFromElements(
@@ -16,6 +17,7 @@ function App() {
       <Route path='/categories' element={<Categories/>}/>
       <Route path='/categories/:categoryName' element={<CategoryDhikirPage/>}/>
       <Route path='/categories/:categoryName/:dhikir' element={<DhikirPage/>}/>
+      <Route path='/favourite' element={<FavouritePage/>}/>
     </Route>
   );
 

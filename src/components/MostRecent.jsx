@@ -7,11 +7,11 @@ import {
   getDocs,
 } from "firebase/firestore";
 import { db } from "../firebase";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../store/AuthContext";
 import timerIcon from '../assets/timer.svg';
+import FavouriteButton from "./FavouriteButton";
 
 
 export default function MostRecent() {
@@ -39,8 +39,7 @@ export default function MostRecent() {
     };
 
     fetchData();
-  }, [user, loading]); // 👈 run when user or loading changes
-
+  }, [user, loading]);
   if (loading) return <p>Loading...</p>;
   if (!user)
     return (
@@ -83,6 +82,7 @@ export default function MostRecent() {
             </p>
             <p className="font-light text-xs sm:text-sm">{recent.notes}</p>
             <div className="flex items-center mt-5">
+                <FavouriteButton id={recent.fileId} title={recent.title} fawaid={recent.fawaid} notes={recent.notes} catName={recent.catName}/>
               <Link
                 to={`/categories/${recent.catName}/${recent.title.replace(
                   /\s+/g,
