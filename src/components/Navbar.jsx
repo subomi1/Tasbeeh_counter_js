@@ -7,6 +7,7 @@ import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
 import ProfileIcon from "../assets/profile.svg";
 import { useAuth } from "../store/AuthContext";
+import { toast } from 'react-hot-toast';
 
 export default function Navbar() {
   //   const user = auth.currentUser;
@@ -29,14 +30,14 @@ export default function Navbar() {
   function handleLogout() {
     signOut(auth)
       .then(() => {
-        alert("User signed out successfully");
+        toast.success("User signed out successfully");
       })
       .catch((error) => {
         console.error("Error signing out:", error);
       });
   }
   return (
-    <nav className="flex justify-between p-5">
+    <nav className="flex justify-between p-5" id="hero">
       <div className="logo flex items-center gap-1">
         <img src={logo} alt="Logo" className="w-8" />
         <h1 className="lato font-bold">Tasbeeh Counter</h1>

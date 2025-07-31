@@ -24,6 +24,7 @@
     "react-hot-toast": "^2.5.2",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.7.0",
+    "react-scroll": "^1.9.3",
     "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
     "tailwindcss": "^4.1.11"

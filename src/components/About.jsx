@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="p-5">
+    <section className="p-5" id="message">
       <h2 className="text-md sm:text-lg lg:text-lg font-bold mb-2 text-center">
         A Message
       </h2>
