@@ -7,17 +7,21 @@ import Categories from './components/Categories';
 import CategoryDhikirPage from './components/CategoryDhikirPage';
 import DhikirPage from './components/DhikirPage';
 import FavouritePage from './components/FavouritePage';
+import History from './components/History';
+import MainLayout from './layout/MainLayout';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const route = createRoutesFromElements(
-    <Route>
-      <Route path='/' element={<Homepage/>}/>
+    <Route path='/' element={<MainLayout/>}>
+      <Route index element={<Homepage/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/categories' element={<Categories/>}/>
       <Route path='/categories/:categoryName' element={<CategoryDhikirPage/>}/>
       <Route path='/categories/:categoryName/:dhikir' element={<DhikirPage/>}/>
       <Route path='/favourite' element={<FavouritePage/>}/>
+      <Route path='/history' element={<History/>}/>
     </Route>
   );
 
@@ -25,6 +29,7 @@ function App() {
 
   return (
     <>
+      <Toaster position='top-center'/>
       <RouterProvider  router={router}/>
     </>
   )

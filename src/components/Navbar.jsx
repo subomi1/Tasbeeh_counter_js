@@ -57,12 +57,12 @@ export default function Navbar() {
         />
       )}
       <div className={cssClass}>
-        <NavLink className="font-semibold lato">Home</NavLink>
+        <NavLink className="font-semibold lato" to='/'>Home</NavLink>
         <NavLink className="font-semibold lato" to="/categories">
           Categories
         </NavLink>
         <NavLink className="font-semibold lato" to="/favourite">Favourites</NavLink>
-        <NavLink className="font-semibold lato">History</NavLink>
+        <NavLink className="font-semibold lato" to="/history">History</NavLink>
         {user ? (
           <div className={flexClass}>
             <p className="font-semibold lato flex items-center gap-1">

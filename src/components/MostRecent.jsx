@@ -81,7 +81,7 @@ export default function MostRecent() {
               {recent.fawaid}
             </p>
             <p className="font-light text-xs sm:text-sm">{recent.notes}</p>
-            <div className="flex items-center mt-5">
+            <div className="flex items-center mt-auto">
                 <FavouriteButton id={recent.fileId} title={recent.title} fawaid={recent.fawaid} notes={recent.notes} catName={recent.catName}/>
               <Link
                 to={`/categories/${recent.catName}/${recent.title.replace(

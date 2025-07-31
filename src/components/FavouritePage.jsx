@@ -5,7 +5,8 @@ import { query, collection, where, orderBy, getDocs } from "firebase/firestore";
 import FavouriteButton from "./FavouriteButton";
 import { Link } from "react-router-dom";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
-import { doc, setDoc, serverTimestamp  } from "firebase/firestore";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import timerIcon from "../assets/timer.svg";
 
 export default function FavouritePage() {
   const [data, setData] = useState([]);
@@ -55,55 +56,77 @@ export default function FavouritePage() {
       }
     });
   }
+  if (!user)
+    return (
+      <div className="p-5 w-full h-60">
+        <div className="mt-8 w-full flex flex-col items-center gap-3 justify-center h-60">
+          <p className="text-center text-[15px] font-bold">
+            Please log in to view your favourite Dhikir 🙏
+          </p>{" "}
+          <Link
+            to="/login"
+            className="bg-[#14b766] px-4 py-2 rounded-md text-white flex text-center font-semibold lato"
+          >
+            Login
+          </Link>
+        </div>
+      </div>
+    );
 
   return (
     <section className="p-5">
       <h1 className="text-center font-bold lato text-2xl sm:text-4xl mb-8 border-b-2">
-        Favourite
+        Favourites
       </h1>
-      <ul className="flex flex-wrap gap-3 justify-center">
-        {data.map((favourite) => (
-          <li
-            key={favourite.id}
-            className="md:w-80 border-2 border-[#14b766] p-3 flex flex-col rounded-md"
-          >
-            <h1 className="text-md sm:text-lg lg:text-lg font-bold mb-3">
-              {favourite.title}
-            </h1>
-            <p className="mb-5 font-semibold text-xs sm:text-sm ">
-              {favourite.fawaid || "No description"}
-            </p>
-            <p className="font-light text-xs sm:text-sm">{favourite.notes}</p>
-            <div className="flex items-center mt-auto">
-              <FavouriteButton
-                id={favourite.id}
-                title={favourite.title}
-                notes={favourite.notes}
-                fawaid={favourite.fawaid}
-                catName={favourite.catName}
-              />
-              <Link
-                to={`/categories/${favourite.catName}/${favourite.title.replace(
-                  /\s+/g,
-                  ""
-                )}`}
-                className="px-4 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition hover:border-[1px] hover:border-[black] ml-auto mt-auto"
-                onClick={() =>
-                  handleRecents(
-                    favourite.id,
-                    favourite.title,
-                    favourite.fawaid,
-                    favourite.notes,
+      {data.length > 0 ? (
+        <ul className="flex flex-wrap gap-3 justify-center">
+          {data.map((favourite) => (
+            <li
+              key={favourite.id}
+              className="md:w-80 border-2 border-[#14b766] p-3 flex flex-col rounded-md"
+            >
+              <h1 className="text-md sm:text-lg lg:text-lg font-bold mb-3">
+                {favourite.title}
+              </h1>
+              <p className="mb-5 font-semibold text-xs sm:text-sm ">
+                {favourite.fawaid || "No description"}
+              </p>
+              <p className="font-light text-xs sm:text-sm">{favourite.notes}</p>
+              <div className="flex items-center mt-auto">
+                <FavouriteButton
+                  id={favourite.id}
+                  title={favourite.title}
+                  notes={favourite.notes}
+                  fawaid={favourite.fawaid}
+                  catName={favourite.catName}
+                />
+                <Link
+                  to={`/categories/${
                     favourite.catName
-                  )
-                }
-              >
-                Count
-              </Link>
-            </div>
-          </li>
-        ))}
-      </ul>
+                  }/${favourite.title.replace(/\s+/g, "")}`}
+                  className="px-4 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition hover:border-[1px] hover:border-[black] ml-auto mt-auto"
+                  onClick={() =>
+                    handleRecents(
+                      favourite.id,
+                      favourite.title,
+                      favourite.fawaid,
+                      favourite.notes,
+                      favourite.catName
+                    )
+                  }
+                >
+                  Count
+                </Link>
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div className="flex items-center mt-8 justify-center gap-1 w-full h-60">
+          <img src={timerIcon} alt="" className="w-5" />
+          <h1 className="sm:text-2xl">No favourites selected</h1>
+        </div>
+      )}
     </section>
   );
 }
