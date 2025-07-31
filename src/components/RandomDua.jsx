@@ -17,7 +17,7 @@ export default function RandomDua() {
   }, []);
 
   function handleCurrentDua() {
-    setAnimate(false); // trigger exit animation
+    setAnimate(false);
 
     setTimeout(() => {
       setCurrentDua((prev) => (prev >= data.length - 1 ? 0 : prev + 1));
