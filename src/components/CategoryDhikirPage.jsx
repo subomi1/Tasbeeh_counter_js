@@ -30,7 +30,6 @@ export default function CategoryDhikirPage() {
             catName,
             timestamp: serverTimestamp()
         })
-        console.log("User is signed in, UID:", user.uid);
       } else {
         console.log("No user signed in.");
       }

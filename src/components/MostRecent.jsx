@@ -60,8 +60,6 @@ export default function MostRecent() {
         </div>
       </div>
     );
-
-  console.log(data);
   return (
     <section className="p-5" id="recent">
       <h1 className="w-full max-w-6xl text-[#0e141b] text-md sm:text-lg lg:text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4 mb-2">
