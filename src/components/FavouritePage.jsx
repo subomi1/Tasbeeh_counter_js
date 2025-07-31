@@ -99,6 +99,12 @@ export default function FavouritePage() {
                   notes={favourite.notes}
                   fawaid={favourite.fawaid}
                   catName={favourite.catName}
+                  onRemove={() => {
+                    setData((prev) =>
+                      prev.filter((item) => item.id !== favourite.id)
+                    );
+                  }}
+                  onAdd={(newItem) => setData((prev) => [newItem, ...prev])}
                 />
                 <Link
                   to={`/categories/${

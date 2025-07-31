@@ -9,8 +9,9 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import { db } from "../firebase";
+import { toast } from 'react-hot-toast';
 
-export default function FavouriteButton({ id, title, fawaid, notes, catName }) {
+export default function FavouriteButton({ id, title, fawaid, notes, catName, onRemove }) {
   const { user, loading } = useAuth();
   const [isFavourite, setIsFavourite] = useState(false);
 
@@ -30,8 +31,10 @@ export default function FavouriteButton({ id, title, fawaid, notes, catName }) {
       if (isFavourite) {
         await deleteDoc(favRef);
         setIsFavourite(false);
+        toast.success("Dhikir removed from your favourites");
+        if (onRemove) onRemove()
       } else {
-        await setDoc(favRef, {
+         const newItems = {
           userid: user.uid,
           id,
           title,
@@ -39,8 +42,10 @@ export default function FavouriteButton({ id, title, fawaid, notes, catName }) {
           notes,
           catName,
           timestamp: serverTimestamp(),
-        });
+        };
+        await setDoc(favRef, newItems)
         setIsFavourite(true);
+        toast.success("Dhikir added to your favourites")
       }
     } catch (error) {
       console.error("Error updating favourites:", error);
