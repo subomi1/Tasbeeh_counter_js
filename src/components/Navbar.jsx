@@ -1,4 +1,4 @@
-import logo from "../assets/OIP__1_-removebg-preview.png";
+import logo from "../../public/images/OIP__1_-removebg-preview.png"
 import { NavLink } from "react-router-dom";
 import hamIcon from "../assets/ham.svg";
 import exitIcon from "../assets/x.svg";
