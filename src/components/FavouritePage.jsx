@@ -110,15 +110,16 @@ export default function FavouritePage() {
                     favourite.catName
                   }/${favourite.title.replace(/\s+/g, "")}`}
                   className="px-4 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition hover:border-[1px] hover:border-[black] ml-auto mt-auto"
-                  onClick={() =>
+                  onClick={() => {
                     handleRecents(
                       favourite.id,
                       favourite.title,
                       favourite.fawaid,
                       favourite.notes,
                       favourite.catName
-                    )
-                  }
+                    );
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
                 >
                   Count
                 </Link>

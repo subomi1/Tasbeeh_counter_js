@@ -58,12 +58,12 @@ export default function Navbar() {
         />
       )}
       <div className={cssClass}>
-        <NavLink className="font-semibold lato" to='/'>Home</NavLink>
-        <NavLink className="font-semibold lato" to="/categories">
+        <NavLink className="font-semibold lato" to='/' onClick={() => setClick(false)}>Home</NavLink>
+        <NavLink className="font-semibold lato" to="/categories" onClick={() => setClick(false)}>
           Categories
         </NavLink>
-        <NavLink className="font-semibold lato" to="/favourite">Favourites</NavLink>
-        <NavLink className="font-semibold lato" to="/history">History</NavLink>
+        <NavLink className="font-semibold lato" to="/favourite" onClick={() => setClick(false)}>Favourites</NavLink>
+        <NavLink className="font-semibold lato" to="/history" onClick={() => setClick(false)}>History</NavLink>
         {user ? (
           <div className={flexClass}>
             <p className="font-semibold lato flex items-center gap-1">

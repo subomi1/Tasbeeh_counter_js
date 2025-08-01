@@ -3,7 +3,6 @@ import RandomDua from "../components/RandomDua";
 import PopularDhikir from "../components/PopularDhikir";
 import MostRecent from "../components/MostRecent";
 import About from "../components/About";
-import Footer from "../components/Footer";
 
 export default function Homepage() {
   return (
@@ -13,7 +12,6 @@ export default function Homepage() {
       <RandomDua />
       <MostRecent />
       <About />
-      <Footer />
     </>
   );
 }

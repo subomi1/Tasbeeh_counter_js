@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
-import { collection, where, orderBy, getDocs, query } from "firebase/firestore";
+import {
+  collection,
+  where,
+  orderBy,
+  getDocs,
+  query,
+  limit,
+} from "firebase/firestore";
 import { useAuth } from "../store/AuthContext";
 import timerIcon from "../assets/timer.svg";
 import { db } from "../firebase";
@@ -18,7 +25,8 @@ export default function History() {
       const q = query(
         collection(db, "recentlyViewed"),
         where("id", "==", user.uid),
-        orderBy("timestamp", "desc")
+        orderBy("timestamp", "desc"),
+        limit(10)
       );
 
       try {
@@ -92,6 +100,9 @@ export default function History() {
                     ""
                   )}`}
                   className="px-4 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition hover:border-[1px] hover:border-[black] ml-auto mt-auto"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   Count
                 </Link>
