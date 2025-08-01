@@ -5,7 +5,6 @@ import FetchContext from "../store/FetchContext";
 export default function FetchCategories() {
   const fetchCtx = useContext(FetchContext);
   const data = fetchCtx.data;
-  console.log(data);
   return (
     <div className="flex flex-wrap gap-3 justify-center md:justify-around">
       {data?.map((data) => (

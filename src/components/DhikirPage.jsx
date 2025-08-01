@@ -1,7 +1,18 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import FetchContext from "../store/FetchContext";
 import { useDispatch, useSelector } from "react-redux";
+import { useAuth } from "../store/AuthContext";
+import { db } from "../firebase";
+import {
+  doc,
+  setDoc,
+  query,
+  collection,
+  where,
+  orderBy,
+  getDocs,
+} from "firebase/firestore";
 
 export default function DhikirPage() {
   const fetchCtx = useContext(FetchContext);
@@ -9,13 +20,48 @@ export default function DhikirPage() {
   const params = useParams();
   const [current, setCurrent] = useState("arabic");
   const count = useSelector((state) => state.count);
-  const [badge, setBadge] = useState(0); 
+  const [badge, setBadge] = useState({});
+  const { user, loading } = useAuth();
   const dispatch = useDispatch();
-  function handleAddAction(totalCount) {
-    dispatch({ type: "increment", totalAmount: totalCount});
+  function handleAddAction(totalCount, dhikrId) {
+    dispatch({ type: "increment", totalAmount: totalCount });
     if (count + 1 == totalCount) {
-        setBadge((prev) => prev + 1)
+      const current = badge[dhikrId] ?? 0;
+      const updated = current + 1;
+      setBadge((prev) => ({ ...prev, [dhikrId]: updated }));
+      handleBadge(dhikrId, updated);
     }
+  }
+
+  useEffect(() => {
+    if (!user || loading) return;
+
+    async function fetchAllBadges() {
+      const q = query(collection(db, "badge"), where("userId", "==", user.uid));
+      try {
+        const querySnapshot = await getDocs(q);
+        const badgeMap = {};
+        querySnapshot.forEach((doc) => {
+          const data = doc.data();
+          badgeMap[data.id] = data.badge ?? 0;
+        });
+        setBadge(badgeMap);
+      } catch (error) {
+        console.error("Failed to fetch badges:", error);
+      }
+    }
+
+    fetchAllBadges();
+  }, [user, loading]);
+
+  async function handleBadge(id, badge) {
+    if (!user || loading) return;
+    const badgeRef = doc(db, "badge", `${user.uid}_${id}`);
+    await setDoc(badgeRef, {
+      id,
+      badge: badge ?? 0,
+      userId: user.uid,
+    });
   }
   let cssClasses = "border-b-4 border-b-amber-500 rounded-md";
   return (
@@ -86,8 +132,10 @@ export default function DhikirPage() {
 
                         {/* Inner white circle to make the ring effect */}
                         <div
-                          className="absolute inset-[8%] bg-gray-50 rounded-full z-20 flex flex-col items-center justify-center"
-                          onClick={() => handleAddAction(data.count, data.title)}
+                          className="absolute inset-[8%] bg-gray-50 rounded-full z-20 flex flex-col items-center justify-center cursor-pointer"
+                          onClick={() => {
+                            handleAddAction(data.count, data.id);
+                          }}
                         >
                           <p className="text-3xl font-bold text-gray-800">
                             {count}
@@ -98,8 +146,7 @@ export default function DhikirPage() {
 
                       {/* Red badge */}
                       <div className="absolute -top-3 -right-3 bg-red-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold z-30 shadow-md">
-                        {() => handleTotal(data.count)}
-                        {badge}
+                        {badge[data.id] ?? 0}
                       </div>
                     </div>
                   </div>

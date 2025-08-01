@@ -15,8 +15,6 @@ export function FetchContextProvider({ children }) {
     fetchdata();
   }, []);
 
-  console.log(data);
-
   return(
     <FetchContext.Provider value={{data}}>
         {children}

@@ -21,7 +21,7 @@ export default function Navbar() {
   let flexClass = '';
   if (click) {
     cssClass =
-      "absolute flex flex-col gap-3 items-center w-full top-[60px] p-5 bg-white right-0 glass";
+      "absolute flex flex-col gap-3 items-center w-full top-[60px] p-5 bg-white right-0 glass z-50";
     flexClass = 'flex flex-col gap-3';
   } else {
     cssClass = "nav-links sm:flex gap-5 items-center hidden";
@@ -37,7 +37,7 @@ export default function Navbar() {
       });
   }
   return (
-    <nav className="flex justify-between p-5" id="hero">
+    <nav className="flex justify-between p-5 z-50" id="hero">
       <div className="logo flex items-center gap-1">
         <img src={logo} alt="Logo" className="w-8" />
         <h1 className="lato font-bold">Tasbeeh Counter</h1>
