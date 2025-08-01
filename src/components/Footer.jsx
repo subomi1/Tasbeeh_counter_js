@@ -14,6 +14,7 @@ export default function Footer() {
               <Link
                 to="/"
                 className="hover:underline transition-all duration-300 cursor-pointer"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Home
               </Link>
@@ -22,6 +23,7 @@ export default function Footer() {
               <Link
                 to="/categories"
                 className="hover:underline cursor-pointer"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Categories
               </Link>
@@ -30,6 +32,7 @@ export default function Footer() {
               <Link
                 to="/favourite"
                 className="hover:underline cursor-pointer"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Favourite
               </Link>
@@ -38,6 +41,7 @@ export default function Footer() {
               <Link
                 to="/history"
                 className="hover:underline cursor-pointer"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 History
               </Link>
